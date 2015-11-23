@@ -1,0 +1,79 @@
+dashboard:
+  build: ./dashboard
+
+mysql_data:
+  image: mysql # volumes needed?
+  entrypoint: /bin/echo mysql data
+mysql:
+  image: mysql
+  environment:
+    - MYSQL_ROOT_PASSWORD=admin
+    - MYSQL_USER=user
+    - MYSQL_PASSWORD=password
+  volumes_from:
+    - mysql_data
+  ports:
+    - "3306:3306"
+
+postgres_data:
+  image: postgres
+  entrypoint: /bin/echo postgres data
+postgres:
+  image: postgres
+  environmnet:
+    - POSTGRES_USER=admin
+    - POSTGRES_PASSWORD=admin
+  volumes_from:
+    - postgres_data
+  ports:
+    - "5432:5432"
+
+sonar_data:
+  image: sonar
+  entrypoint: /bin/echo sonar data
+sonar:
+  image: sonarqube
+  environment:
+    - SONARQUBE_JDBC_USERNAME=root
+    - SONARQUBE_JDBC_PASSWORD=admin
+    - SONARQUBE_JDBC_URL=jdbc:postgresql://postgres/sonar
+  volumes_from:
+    - sonar_data
+  links:
+    - mysql
+    - postgres
+
+artifactory_data:
+  image: artifactory
+  entrypoint: /bin/echo artifactory data
+artifactory:
+  image: artifactory
+  environment:
+    -
+  volumes_from:
+    - artifactory_data
+
+jenkins_data:
+  image: jenkins
+  entrypoint: /bin/echo jenkins data
+jenkins:
+  image: jenkins
+  volumes_from:
+    - jenkins_data
+  links:
+    - postgres
+    - mysql
+    - sonar
+    - artifactory
+
+nginx:
+  image: nginx
+  ports:
+    - "80:80"
+  volumes:
+    - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+  links:
+    - dashboard
+    - sonar
+    - artifactory
+    - jenkins
