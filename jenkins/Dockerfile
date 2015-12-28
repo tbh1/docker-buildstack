@@ -1,6 +1,6 @@
 FROM jenkins
 
-ENV GRADLE_HOME /usr/bin/gradle
+ENV GRADLE_HOME /usr/bin/gradle-2.10
 ENV PATH $PATH:$GRADLE_HOME/bin
 ENV TERM ${TERM:-dumb}
 ENV PORT 8080

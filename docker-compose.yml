@@ -43,9 +43,11 @@ jenkins_data:
   image: jenkins
   entrypoint: /bin/true
 jenkins:
-  image: jenkins
+  build: ./jenkins
   volumes_from:
     - jenkins_data
+  volumes:
+    - ./jenkins/home:/var/jenkins_home
   links:
     - postgres
     - sonar
