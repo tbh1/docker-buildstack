@@ -1,19 +1,32 @@
 <div class="banner">
-  <img width="100%" height="auto" src="assets/images/docker-banner-dark.png">
+  <img src="assets/images/docker-banner-dark.png">
 </div>
 
 <div layout-padding>
   <h1>Build Tools</h1>
 
-  <ul class="buckets" layout-wrap layout-align-center-center layour-row>
-    <li ng-repeat="tool in vmHome.buildTools" class="flex-sm-50 flex-md-50 flex-25">
-      <a class="md-button md-primary md-raised md-ink-ripple" ng-href="{{tool.link}}">
-        <div class="block"><img width="50px" height="auto" ng-src="assets/images/{{tool.icon}}"/></div>
-        <span class="block">
-          {{tool.name}}
-        </span>
-      </a>
-    </li>
-  </ul>
+  <div>
+    <div layout="row" layout-md="column">
+      <div flex="25" ng-repeat="link in vmHome.internalLinks">
+        <md-button class="image-btn" href="{{link.link}}">
+          <img class="image-btn-icon" ng-src="assets/images/{{link.icon}}"/>
+          <h2>{{link.name}}</h2>
+        </md-button>
+      </div>
+    </div>
+  </div>
+
+  <h1>External Links</h1>
+
+  <div>
+    <div layout="row" layout-md="column">
+      <div flex="25" ng-repeat="link in vmHome.externalLinks">
+        <md-button class="image-btn" href="{{link.link}}">
+          <img class="image-btn-icon" ng-src="assets/images/{{link.icon}}"/>
+          <h2>{{link.name}}</h2>
+        </md-button>
+      </div>
+    </div>
+  </div>
 
 </div>

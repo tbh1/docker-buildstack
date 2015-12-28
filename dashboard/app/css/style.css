@@ -1,45 +1,27 @@
 body {
-    font-size: 1.6rem;
-    min-width: 450px;
+  font-size: 1.6rem;
+  min-width: 450px;
 }
 
-ul.buckets li {
-    list-style: none;
-    margin: 0;
-    text-align: center;
-}
-ul li:first-child {
-    margin-top: 0;
-}
-ul li {
-    margin-left: 16px;
-    padding: 0;
-    margin-top: 3px;
-    list-style-position: inside;
-}
-ul.buckets li a, ul.buckets li a md-icon {
-    color: #666 !important;
-    transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1);
-}
-ul.buckets li a {
-    display: block;
-    font-weight: 500;
-    padding: 16px 0;
-    text-decoration: none;
-    -webkit-transition: all 0.45s cubic-bezier(0.35, 0, 0.25, 1);
-    background-color: #f6f6f6 !important;
-    box-shadow: none !important;
-    margin-right: 0;
-    margin-top: 0;
-}
-a.md-button {
-    border-bottom: none;
+.banner {
+  background-color: #253237;
+  color: #FFF;
+  font-size: 2em;
 }
 
-img.block {
-    md-icon.block {
-    color: #106CC8;
-    display: block;
-    height: 50px;
-    width: 50px;
-}}
+.banner > img {
+  max-width: 100%;
+  max-height: 300px;
+}
+
+.image-btn {
+  width: 250px;
+  display: inline-flex;
+}
+
+.image-btn > img {
+  height: 50px;
+  padding:5px;
+  width: auto;
+  margin-right: 20px;
+}

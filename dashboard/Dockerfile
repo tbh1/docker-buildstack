@@ -6,6 +6,6 @@ EXPOSE 3000
 COPY . /app
 WORKDIR /app
 
-RUN npm purge && npm i
+RUN npm prune && npm i
 
-CMD npm run
+CMD npm start
