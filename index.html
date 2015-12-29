@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Docker-Buildstack : Starting point for a dockerized build stack. The goal is to be easily modified to meet needs of small teams for continuous delivery.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Docker-Buildstack</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/toxicblu/docker-buildstack">View on GitHub</a>
+
+          <h1 id="project_title">Docker-Buildstack</h1>
+          <h2 id="project_tagline">Starting point for a dockerized build stack. The goal is to be easily modified to meet needs of small teams for continuous delivery.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/toxicblu/docker-buildstack/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/toxicblu/docker-buildstack/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="dockerized-buildstack" class="anchor" href="#dockerized-buildstack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dockerized Buildstack</h1>
+
+<p>This is a simple starting point for a containerized build pipeline using Docker and Docker-Compose.</p>
+
+<h2>
+<a id="motivation" class="anchor" href="#motivation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Motivation</h2>
+
+<ul>
+<li>A fast and simple way to spin up a build pipeline</li>
+<li>A customizable build-server dashboard</li>
+<li>A way to keep the entire pipeline in source control</li>
+</ul>
+
+<h2>
+<a id="using-this-project" class="anchor" href="#using-this-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using this project:</h2>
+
+<ul>
+<li>Fork this repository and clone</li>
+<li>Make sure you have <a href="https://www.docker.com/">Docker</a> and <a href="https://docs.docker.com/compose/install/">Docker-Compose</a> installed and working</li>
+<li>Run <code>docker-compose up</code> from the root of your clone</li>
+<li>Use git to track changes to the pipeline</li>
+</ul>
+
+<p>The included dashboard is a simple Angular app. It should be easy to extend/customize to your liking.</p>
+
+<h2>
+<a id="todo" class="anchor" href="#todo" aria-hidden="true"><span class="octicon octicon-link"></span></a>TODO:</h2>
+
+<ul>
+<li>make aggregated docker logs available in the dashboard</li>
+<li>Make jenkins install all missing plugins on initial run</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Docker-Buildstack maintained by <a href="https://github.com/toxicblu">toxicblu</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
