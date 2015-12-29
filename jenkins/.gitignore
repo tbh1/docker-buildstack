@@ -2,9 +2,13 @@ home/*
 
 # Track server/plugin configs
 !home/*.xml
+home/queue.xml
 
 # Track job configs and metadata
 !home/jobs
 home/jobs/*/*
 !home/jobs/*/*.xml
 !home/jobs/*/nextBuildNumber
+
+# Misc
+!home/userContent
