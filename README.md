@@ -14,6 +14,8 @@ This is a simple starting point for a containerized build pipeline using Docker 
 
 The included dashboard is a simple Angular app. It should be easy to extend/customize to your liking.
 
+![dashboard](https://github.com/toxicblu/docker-buildstack/blob/gh-pages/images/dashboard_preview.png)
+
 ##TODO: 
 - make aggregated docker logs available in the dashboard
 - Make jenkins install all missing plugins on initial run
